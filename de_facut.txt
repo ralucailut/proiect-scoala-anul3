@@ -1,0 +1,22 @@
+- modul login (2 clase useri secretar/admin care vede totul si diriginte care isi vede doar clasa aferenta)
+
+- modul exporturi pdf
+    = per elev =
+    - foaie matricola
+    - adeverinta ca e elev
+    - adeverinta absolvent 8 clase
+    - certificat absolvire nivel gimnazial (se da la finalul clasei a 8-a impreuna cu diploma de la examen)
+    = per scoala = 
+    - lista cu cei ce intra in examenul de final clasa a 8-a
+    - lista cu cei corigenti
+    - borderou timbru sec (pentru cei ce au promovat 8 clase si au luat si examenul national, se da la inspectorat pentru punere timbru sec pe diploma)
+
+- modul statistici
+    - statistica pe varsta, medii (varsta din cnp)
+    - statistici examen national final clasa a 8-a (nr promovati, nr prezenti, nr inscrisi, suma note, cate note de 1-1.99, 2-2.99, etc au fost, procent promovabilitate, toate pe fiecare materie in parte plus per total)
+
+- modul adaugare/editare materii - materiile posibil sa se schimbe de la un an la altul, se editeaza aceste materii pe fiecare clasa in parte, de aici isi ia datele functia de completare materii
+
+- modul examen national final clasa a 8-a
+    - de modificat baza de date, inca un tabel
+    - notele de la examen: lb romana, lb materna, matematica
