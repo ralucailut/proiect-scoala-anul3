@@ -154,7 +154,7 @@ public class Main extends javax.swing.JFrame {
         jTextField1.setText("[functia este in lucru]");
         jTextField1.setToolTipText("");
 
-        jLabel2.setText("Management elevi v0.0.1 Alpha - Autor: Erdei Rudolf - Toate drepturile rezervate.");
+        jLabel2.setText("Management elevi v0.0.1 Pre-Alpha - Autor: Erdei Rudolf - Toate drepturile rezervate.");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

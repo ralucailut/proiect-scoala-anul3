@@ -233,7 +233,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Management elevi v0.0.1 Alpha - Autor: Erdei Rudolf - Toate drepturile rezervate."/>
+        <Property name="text" type="java.lang.String" value="Management elevi v0.0.1 Pre-Alpha - Autor: Erdei Rudolf - Toate drepturile rezervate."/>
       </Properties>
     </Component>
   </SubComponents>
