@@ -31,6 +31,6 @@ public class ModelClasa extends AbstractListModel {
     @Override
     public Object getElementAt(int index) {
         return clase.get(index).clasa;
-    }
+    }    
     
 }

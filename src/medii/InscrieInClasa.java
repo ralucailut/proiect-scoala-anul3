@@ -5,11 +5,9 @@
  */
 package medii;
 
-import clase.Clasa;
 import clase.Semestru;
-import db.DbClase;
 import db.DbSemestre;
-import java.util.ArrayList;
+import static medii.ListaMediiElev.*;
 
 /**
  *
@@ -125,7 +123,10 @@ public class InscrieInClasa extends javax.swing.JFrame {
         DbSemestre salvare = new DbSemestre();
         salvare.insert(unu);
         salvare.insert(doi);
-        //inchide fereastra
+        //refresh
+        sem.fireTableDataChanged();
+        mat.fireTableDataChanged();
+        this.dispose();
     }//GEN-LAST:event_InscrieActionPerformed
 
 

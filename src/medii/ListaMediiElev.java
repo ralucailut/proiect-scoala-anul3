@@ -14,8 +14,8 @@ import java.util.ArrayList;
 public class ListaMediiElev extends javax.swing.JFrame {
     private int id_elev;
     public static ListaMediiElev eu;
-    ModelListaSemestre sem;
-    ModelListaMaterii mat;
+    public static ModelListaSemestre sem;
+    public static ModelListaMaterii mat;
     /**
      * Creates new form ListaMediiElev
      * @param id_elev - id-ul elevului pentru care se doreste lista mediilor
