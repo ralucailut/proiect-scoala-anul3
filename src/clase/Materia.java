@@ -10,7 +10,7 @@ package clase;
  * @author yo5bdm
  */
 public class Materia {
-    public Integer id;
+    public Integer id; 
     public Integer materia_id;
     public Integer clasa_id;
     
