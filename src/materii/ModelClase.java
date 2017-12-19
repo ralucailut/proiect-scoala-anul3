@@ -43,4 +43,10 @@ public class ModelClase extends AbstractTableModel {
     public String getColumnName(int nr) {
         return coloane[nr];
     }
+    public Clasa getFirst() {
+        return listaClase.get(0);
+    }
+    Clasa get(int i) {
+        return listaClase.get(i);
+    }
 }

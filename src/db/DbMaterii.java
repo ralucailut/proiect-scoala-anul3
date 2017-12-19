@@ -44,17 +44,16 @@ public class DbMaterii extends DbCon {
     public Object get(Integer id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
+    
     public ArrayList cauta(Integer clasa_id) {
         try {
-            //throw new UnsupportedOperationException("Not supported yet.");
-            String sql = "SELECT "+Setari.NUME_MATERII+".id FROM "+Setari.NUME_MATERII+" JOIN "+Setari.MATERII+" ON "+Setari.NUME_MATERII+".id = "+Setari.MATERII+".materii_id JOIN "+Setari.NUME_CLASA+" ON "+Setari.MATERII+".clasa_id = clases.id WHERE "+Setari.NUME_CLASA+".id = ?";
+            String sql = "SELECT "+Setari.NUME_MATERII+".id, Nume_materie FROM "+Setari.NUME_MATERII+" JOIN "+Setari.MATERII+" ON "+Setari.NUME_MATERII+".id = "+Setari.MATERII+".materii_id JOIN "+Setari.NUME_CLASA+" ON "+Setari.MATERII+".clasa_id = clases.id WHERE "+Setari.NUME_CLASA+".id = ?";
             PreparedStatement stmt = con.prepareStatement(sql);
             stmt.setInt(1, clasa_id);
             ResultSet rs = stmt.executeQuery();
             ArrayList<Materia> materii = new ArrayList();
             while(rs.next()) {
-                materii.add(new Materia(rs.getInt(Setari.NUME_MATERII+".id")));
+                materii.add(new Materia(rs.getInt(Setari.NUME_MATERII+".id"),rs.getString("Nume_materie")));
             }
             return materii;
         } catch (SQLException ex) {
@@ -62,5 +61,7 @@ public class DbMaterii extends DbCon {
             return null;
         }
     }
+
+    
     
 }

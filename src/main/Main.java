@@ -27,11 +27,12 @@ public class Main extends javax.swing.JFrame {
         setLocationRelativeTo(null); //center
         jTable1.setModel(m);
         jTable1.setAutoCreateRowSorter(true);
-        while(user_logat==null) { //de modificat sa incerce de 3 ori si sa iasa apoi
+        System.out.println("Loginul a fost dezactivat temporar");
+        /*while(user_logat==null) { //de modificat sa incerce de 3 ori si sa iasa apoi
             new Login(this,true).setVisible(true);
             DbUser dbuser = new DbUser();
             user_logat = dbuser.verifica(user_logat);
-        }
+        }*/
     }
 
     /**

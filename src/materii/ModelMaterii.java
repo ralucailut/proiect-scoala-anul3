@@ -16,14 +16,23 @@ import javax.swing.table.AbstractTableModel;
  * @author yo5bdm
  */
 public class ModelMaterii extends AbstractTableModel {
+    private Clasa clasa_curenta;
     private DbMaterii dbMaterii;
     private ArrayList<Materia> listaMaterii;
     
-    private String[] coloane = {"Clasa"};
+    private String[] coloane = {"Materia"};
     private final Class[] columnClass = new Class[] {
-        Integer.class
+        String.class
     };
-    
+    ModelMaterii(Clasa first) {
+        dbMaterii = new DbMaterii();
+        clasa_curenta = first;
+        refresh();
+    }
+    public void reincarca(Clasa c) {
+        clasa_curenta = c;
+        refresh();
+    }
     @Override
     public int getRowCount() {
         return listaMaterii.size();
@@ -39,5 +48,9 @@ public class ModelMaterii extends AbstractTableModel {
     @Override
     public String getColumnName(int nr) {
         return coloane[nr];
+    }
+    private void refresh() {
+        listaMaterii = dbMaterii.cauta(clasa_curenta.clasa);
+        this.fireTableDataChanged();
     }
 }

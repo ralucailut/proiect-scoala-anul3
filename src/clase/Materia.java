@@ -25,11 +25,8 @@ public class Materia {
         this.nume_clasa = nume_clasa;
     }
 
-    public Materia(Integer materia_id) {
+    public Materia(Integer materia_id, String nume_materie) {
         this.materia_id = materia_id;
+        this.nume_materie = nume_materie;
     }
-    
-    
-    
-    
 }
