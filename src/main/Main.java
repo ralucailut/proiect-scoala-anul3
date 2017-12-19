@@ -5,8 +5,11 @@
  */
 package main;
 
+import clase.User;
+import db.DbUser;
 import medii.ListaMediiElev;
 import java.util.ArrayList;
+import materii.Materii;
 
 /**
  *
@@ -14,6 +17,7 @@ import java.util.ArrayList;
  */
 public class Main extends javax.swing.JFrame {
     public static ModelElevi m = new ModelElevi();
+    public static User user_logat;
     
     /**
      * Creates new form Main
@@ -23,6 +27,11 @@ public class Main extends javax.swing.JFrame {
         setLocationRelativeTo(null); //center
         jTable1.setModel(m);
         jTable1.setAutoCreateRowSorter(true);
+        while(user_logat==null) { //de modificat sa incerce de 3 ori si sa iasa apoi
+            new Login(this,true).setVisible(true);
+            DbUser dbuser = new DbUser();
+            user_logat = dbuser.verifica(user_logat);
+        }
     }
 
     /**
@@ -121,6 +130,11 @@ public class Main extends javax.swing.JFrame {
         });
 
         jButton1.setText("Materii");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Rapoarte");
 
@@ -231,6 +245,10 @@ public class Main extends javax.swing.JFrame {
         }
         for(int i:selection) new ListaMediiElev(m.getElevId(i)).setVisible(true);
     }//GEN-LAST:event_jMediiActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        new Materii().setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

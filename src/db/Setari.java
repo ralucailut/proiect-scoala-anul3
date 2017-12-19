@@ -16,6 +16,7 @@ public class Setari {
     public static final String MATERII = "an_studiu_materies";
     public static final String NUME_CLASA = "clases";
     public static final String NUME_MATERII = "materiis";
+    public static final String UTILIZATORI = "users";
     
     //setarile bazei de date
     public static final String HOST= "localhost";
