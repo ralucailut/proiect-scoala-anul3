@@ -92,7 +92,6 @@ public class DbElev extends DbCon {
         }
     }
 
-    @Override
     public ArrayList list() {
         try {
             PreparedStatement stmt = con.prepareStatement("SELECT * FROM "+Setari.ELEVI);

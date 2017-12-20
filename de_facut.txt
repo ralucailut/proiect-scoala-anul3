@@ -1,7 +1,7 @@
 Sa scrieti aici care ce face si un timp estimat de lucru, sa stim sa nu lucram 2 pe aceeasi chestie si sa fim si gata la timp.
 
 - modul login (2 clase useri secretar/admin care vede totul si diriginte care isi vede doar clasa aferenta)
-    - rezolvat partial. de implementat partea de diriginti.
+    - rezolvat partial. de implementat partea de diriginti. - rudi
 
 - modul exporturi pdf
     = per elev =
